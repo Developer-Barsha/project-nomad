@@ -266,6 +266,12 @@ footer>div>ul>li:hover {
     .two-sided img {
         height: 300px;
     }
+    
+    .sm-reverse{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
 
     /* footer styles */
     footer>div>ul {

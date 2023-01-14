@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    font-weight: 600;
+}
+
+main,
+footer {
+    background-color: black;
+    color: white;
+}
+
+button,
+li {
+    cursor: pointer;
+}
+
+#overlay {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.537);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+
+/* top section tyles */
+
+.top-section {
+    background-image: url('./../images/top-section.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    gap: 20px;
+    color: black;
+}
+
+.top-section button {
+    background-color: black;
+    color: white;
+    margin-top: 60px;
+    padding: 8px 30px;
+    border: none;
+}
+
+.top-section button:hover {
+    background-color: #fff;
+    color: black;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.top-section h1 {
+    font-size: 84.8248px;
+    line-height: 127px;
+}
+
+.top-section p {
+    font-size: 17.6632px;
+    line-height: 26px;
+}
+
+
+/* two-sided styles */
+.two-sided {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.two-sided h1 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 62.0882px;
+    line-height: 93px;
+}
+
+.two-sided p {
+    font-size: 15.6506px;
+    line-height: 23px;
+}
+
+.two-sided div {
+    color: white;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.two-sided img {
+    width: 100%;
+    height: 624px;
+}
+
+.two-sided button {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #FFE600;
+    color: #FFE600;
+    padding: 10px 30px;
+    width: fit-content;
+}
+
+.two-sided button:hover {
+    background-color: #FFE600;
+    color: white;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+
+/* footer styles */
+.footer-logo {
+    width: 120px;
+    border: none;
+    border-radius: 0px;
+}
+
+footer,
+.lets-connect {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    padding: 50px;
+    padding-top: 150px;
+    gap: 40px;
+    font-weight: 400 !important;
+}
+
+footer div,
+.icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer>div>button {
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: black;
+    border: 1px solid #999;
+    color: #999;
+}
+
+footer>div>button:hover {
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+footer img {
+    width: 200px;
+    border: 1px solid #999;
+    border-radius: 10px;
+}
+
+footer>div>ul {
+    color: #999;
+}
+
+footer>div>ul>li:hover {
+    color: #fff;
+}
+
+.lets-connect,
+.icons {
+    justify-content: center;
+    gap: 30px;
+}
+
+.icons {
+    font-size: 25px;
+}
+
+.icons i:hover {
+    transform: scale(1.2);
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.footer-menu {
+    color: green;
+}
+
+.footer-menu li:hover {
+    color: rgb(3, 176, 81);
+}
+
+
+
+/******** media queries ********/
+@media screen and (max-width:600px) {
+
+    /* /////////////////////// */
+    ul {
+        flex-direction: column;
+    }
+
+    main,
+    header,
+    footer {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .sm-hide {
+        display: none;
+    }
+
+    /* common styles */
+    .top-section,
+    .two-sided div,
+    footer {
+        padding: 50px 20px;
+    }
+
+    .top-section h1 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+
+    /* top-section */
+
+    .top-section button {
+        margin-top: 20px;
+    }
+
+    .top-section p {
+        font-size: 15px;
+        line-height: 26px;
+    }
+
+
+    /* two-sided */
+    .two-sided {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .two-sided h1 {
+        font-size: 30px;
+        line-height: 50px;
+    }
+
+    .two-sided p {
+        font-size: 14px;
+        text-align: justify;
+    }
+
+    .two-sided img {
+        height: 300px;
+    }
+
+    /* footer styles */
+    footer>div>ul {
+        margin: 25px auto;
+    }
+
+    footer div {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    footer h1 {
+        font-size: 25px;
+        line-height: 50px;
+        text-align: center;
+    }
+
+    .icons {
+        flex-direction: row;
+    }
+}

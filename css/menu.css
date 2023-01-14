@@ -1,0 +1,98 @@
+header{
+    background-color: black;
+    justify-content: space-between;
+    padding: 20px 100px;
+    color: white;
+}
+
+header, ul{
+    display: flex;
+    align-items: center;
+}
+
+ul{
+    gap: 30px;
+}
+
+li{
+    list-style: none;
+}
+
+.header-btns button{
+    background-color: rgba(0, 0, 0, 0);
+    padding: 10px 20px;
+    border: 2px solid white;
+    color: white;
+}
+
+.header-btns button:nth-child(2){
+    border: none;
+    font-size: 20px;
+}
+
+.header-btns{
+    display: flex;
+    gap: 20px;
+}
+
+header select{
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: none;
+    font-size: 17px;
+    border-radius: 3px;
+}
+
+select option{
+    background-color: black;
+    color: white;
+}
+
+#menu-open, #sm-menu, #menu-close{
+    display: none;
+}
+
+
+/******** media queries ********/
+@media screen and (max-width:600px) {
+    #menu-open{
+        position: absolute;
+        display: block;
+        top: 25px;
+        right: 20px;
+    }
+
+    #menu-close{
+        position: absolute;
+        display: block;
+        top: 25px;
+        left: 20px;
+        color: white;
+    }
+
+    #sm-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        color: white;
+        padding: 50px;
+        background-color: black;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+    }
+
+    #sm-menu > .header-btns{
+        margin-top: 20px;
+    }
+
+    header>ul{
+        display: none;
+    }
+
+    header>.header-btns{
+        display: none;
+    }
+}
